@@ -1,8 +1,9 @@
-"""
-Duplicate a folder structure without copying any files. Was used by accounting department to create invoices folders every new fiscal year
-"""
-
 import os
+
+source_folder = ""
+destination_folder = ""
+
+source_directory = os.path.dirname(source_folder)
 
 def create_folder(new_folder):
     if os.path.exists(new_folder):
@@ -10,12 +11,7 @@ def create_folder(new_folder):
         pass
     else :
         print("Creating : " + new_folder)
-        os.mkdir(new_folder)
-
-source_folder = ""
-destination_folder = ""
-
-source_directory = os.path.dirname(source_folder)
+        os.mkdir(new_folder)git
 
 for folder in os.listdir(source_directory):
     path = source_directory + "/" + folder
